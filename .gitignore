@@ -1,0 +1,42 @@
+# Node modules (custom nodes)
+**/node_modules/
+
+# Docker
+docker-compose.override.yml
+*.log
+*.pid
+
+# Docker volumes (PostgreSQL data)
+n8n_postgres_data/
+
+# Environment & auth
+.env
+.env.*
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git merge/resolution metadata
+*.orig
+
+# Custom nodes (build artifacts, optional if you build locally)
+custom_nodes/**/*.js
+custom_nodes/**/*.js.map
+custom_nodes/**/*.tsbuildinfo
+
+# n8n specific cache (if using local or dev builds)
+.n8n/
+
+# Optional: if you ever dump or export workflows
+*.json
+
+# Optional backup files
+*~
+
