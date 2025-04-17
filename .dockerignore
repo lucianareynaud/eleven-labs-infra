@@ -1,0 +1,27 @@
+# Ignore Git and VCS metadata
+.git
+.gitignore
+
+# Node modules and build output (not needed inside container)
+**/node_modules
+custom_nodes/**/dist
+custom_nodes/**/.tsbuildinfo
+
+# Local env and config
+.env
+.env.*
+
+# Docker and editor metadata
+docker-compose.override.yml
+*.log
+*.pid
+.vscode/
+.idea/
+
+# Mac and Windows system files
+.DS_Store
+Thumbs.db
+
+# SSL certificates (should be mounted, not copied)
+ssl/
+

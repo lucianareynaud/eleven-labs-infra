@@ -28,21 +28,21 @@ services:
 
       N8N_HOST: n8n.lucianaferreira.pro
       N8N_PORT: 5678
-      N8N_EDITOR_BASE_URL: http://n8n.lucianaferreira.pro
-      WEBHOOK_URL: http://n8n.lucianaferreira.pro
+      N8N_PROTOCOL: https
+      N8N_EDITOR_BASE_URL: https://n8n.lucianaferreira.pro
+      WEBHOOK_URL: https://n8n.lucianaferreira.pro
 
-      # ✅ Habilita autenticação persistente (sem desativar auth)
       N8N_USER_MANAGEMENT_DISABLED: false
-
-      # ✅ Permite acesso à página /signup para novos usuários
       N8N_AUTH_EXCLUDE_ENDPOINTS: /signup
-
-      # ✅ Suporte a nodes customizados
       N8N_CUSTOM_EXTENSIONS: /custom
+
+      SSL_KEY: /etc/ssl/private/key.pem
+      SSL_CERT: /etc/ssl/private/cert.pem
 
     volumes:
       - ./custom_nodes:/custom
       - ~/.n8n:/home/node/.n8n
+      - ../ssl/eleven-labs:/etc/ssl/private
     depends_on:
       - n8n-db
 

@@ -11,7 +11,7 @@ export class ElevenLabs implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'ElevenLabs',
 		name: 'elevenLabs',
-		icon: 'file:elevenlabs.svg',
+		icon: 'file:elevenlabs.png',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
